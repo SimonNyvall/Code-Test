@@ -80,3 +80,23 @@ let ``getTotalWordAccurences takes SearchQuery expect 3`` () =
 
     // Cleanup
     File.Delete(Path.Combine(__SOURCE_DIRECTORY__, "file.txt"))
+
+
+[<Fact>]
+let ``getTotalWordAccurences takes SearchQuery but wrong case expect 0`` () =
+    let arrange =
+        let path = Path.Combine(__SOURCE_DIRECTORY__, "file.txt")
+        File.WriteAllText(path, "file file file")
+
+    let query =
+        { FilePath = Path.Combine(__SOURCE_DIRECTORY__, "file.txt")
+          SearchWord = "File" }
+
+    let result = getTotalWordAccurences query
+
+    let expected = 0
+
+    Assert.Equal(expected, result)
+
+    // Cleanup
+    File.Delete(Path.Combine(__SOURCE_DIRECTORY__, "file.txt"))

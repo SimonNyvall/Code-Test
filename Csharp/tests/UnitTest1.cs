@@ -101,5 +101,20 @@ public class UnitTest1
         // Assert
         Assert.Equal(1, result);
     }
+
+    // case sensitive test
+    [Fact]
+    public void CountWordAccurences_WithMatchingWordCaseSensitive_ReturnsZero()
+    {
+        // Arrange
+        string line = "This is a test line.";
+        string word = "Test";
+
+        // Act
+        int result = Program.CountWordAccurences(line, word);
+
+        // Assert
+        Assert.Equal(0, result);
+    }
 }
 
