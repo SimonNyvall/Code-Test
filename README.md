@@ -13,7 +13,7 @@ dotnet run <filename>
 
 ## Assumptions
 - The file is a text file, but could be any type of file as long as it is readable.
-- The file is not too large to fit in memory.
+- The program should only take in one argument, which it the file path.
 - The file name is case insensitive. If the file name is "Test", then only "Test" should be counted, not "test" nor "TEST".
 - The file must exist.
 
