@@ -1,4 +1,4 @@
-# Code test
+# Code test [![.NET](https://github.com/SimonNyvall/Code-Test/actions/workflows/dotnet.yml/badge.svg)](https://github.com/SimonNyvall/Code-Test/actions/workflows/dotnet.yml)
 
 ## Problem
 Write a program that takes one argument, reads the file name without the extension, and count the number of times the name of the file appears in the file content.
