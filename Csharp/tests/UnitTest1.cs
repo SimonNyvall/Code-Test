@@ -74,6 +74,7 @@ public class UnitTest1
         Assert.Equal(0, result);
     }
 
+    [Fact]
     public void CountWordAccurences_WithNoMatchingWord_ReturnsZero()
     {
         // Arrange
